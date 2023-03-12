@@ -1,22 +1,27 @@
 # Set Up My Mac
 
-> 🎊 Congrats! Opening up this page seems you've got a brand new Mac!  
-> Now let's set this beast up for development environment just like what you what.
-- [Set Up My Mac](#set-up-my-mac)
-  - [Homebrew](#homebrew)
-  - [iTerm2](#iterm2)
-      - [Font](#font)
-      - [Profile](#profile)
-  - [Oh My Zsh](#oh-my-zsh)
-  - [Powerlevel10k](#powerlevel10k)
-  - [Setup SSH Key](#setup-ssh-key)
-      - [Generate a new SSH key](#generate-a-new-ssh-key)
-      - [Add your SSH key to the ssh-agent](#add-your-ssh-key-to-the-ssh-agent)
-      - [Add your SSH Key to your account](#add-your-ssh-key-to-your-account)
-      - [Test your SSH connection](#test-your-ssh-connection)
+> _Congrats! Opening up this page seems you've got a brand new Mac!  
+> Now let's set this beast up for development environment just like what you what._
+- [Command Line Tools](#command-line-tools)
+- [Homebrew](#homebrew)
+- [iTerm2](#iterm2)
+  - [Font](#font)
+  - [Profile](#profile)
+- [Oh My Zsh](#oh-my-zsh)
+- [Powerlevel10k](#powerlevel10k)
+
+You can setup an SSH key to clone this repo from GitHub with SSH. See [SetupSSH.md](./SetupSSH.md)
+
+
+## Command Line Tools
+The _very first_ thing to do is definitely install Apple's `Command Line Tools`, which is the prerequisites for all development setups.
+```
+xcode-select --install
+```
+
 
 ## Homebrew
-The _very first_ thing to do is definitely install [Homebrew](https://brew.sh) 🍺.
+🍺 [Homebrew](https://brew.sh) is a **_must_**.
 
 Homebrew is the Missing Package Manager for macOS, similar to those that are provided with mainstream Linux distributions. It installs **_the stuff you need that Apple didn’t_**.
 
@@ -35,12 +40,12 @@ iTerm2 is a terminal emulator for macOS that **_does amazing things_**. It is a 
 ```
 brew install --cask iterm2
 ```
-> Let iTerm do the rest of the work onwards 👇  
+> _Let iTerm do the rest of the work onwards_ 👇  
 
-#### Font
+### Font
 [Cascadia Code](https://github.com/microsoft/cascadia-code.git) is one of my favorite font for development environment. It is a fun new coding font with gorgeous coding experience. Get `Cascadia Code` [here](https://github.com/microsoft/cascadia-code/releases). Download the package and open all font files to install them into the system.
 
-#### Profile
+### Profile
 My customized profile for iTerm is included in the repository `Default.json`. Simply import it into iTerm and things are all done!
 
 👉 __Note:__ The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
@@ -57,13 +62,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 
 💡 __Attention:__ A couple of zsh bundles by [zsh-users](https://github.com/zsh-users) to make your zsh more productive:
-- [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) (_Strongly Recommended_)
+- [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - [Zsh AutoSuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [Zsh Completions](https://github.com/zsh-users/zsh-completions)
 
     Do not forget to __activate__ those plugins in `~/.zshrc` after installing them:
     ```
-    plugins=([plugins...] <Plugins you installed>)
+    plugins=([plugins...]
+             Zsh Syntax Highlighting
+             Zsh AutoSuggestions
+    )
     ```
 
 
@@ -84,57 +91,7 @@ Reload zsh by `exec zsh` or simply restart the terminal, the __Configuration Wiz
 Additionally, Powerlevel10k comes with dozens of **_built-in high quality segments_**. Many of these segments get enabled by default while others can be manually enabled by opening `~/.p10k.zsh` and uncommenting them. You can enable as many segments as you like to enhance your command line experience.
 
 
-## Setup SSH Key
-With SSH keys, you can connect to GitHub or GitLab without supplying your username and personal access token at each visit. You can also use an SSH key to sign commits.
 
-#### Generate a new SSH key
-Open Terminal and run the line below, substituting your email address as a label.
-```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-
-Follow the prompts and by default just `[Press Enter]` on every step:
-```
-> Generating public/private ALGORITHM key pair.
-> Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
-> Enter passphrase (empty for no passphrase): [Press Enter]
-> Enter same passphrase again: [Press Enter]
-```
-
-#### Add your SSH key to the ssh-agent
-Start the ssh-agent in the background.
-```
-eval "$(ssh-agent -s)"
-```
-
-Add your SSH key to the ssh-agent.
-```
-ssh-add ~/.ssh/id_rsa
-```
-
-#### Add your SSH Key to your account
-Copy your SSH key to clipboard.
-```
-pbcopy < ~/.ssh/id_rsa.pub
-```
-
-Then you can **_paste_** your SSH Key to your GitHub or GitLab account to enable authentication for Git operations over SSH.
-
-#### Test your SSH connection
-Open Terminal and run the following line.
-```
-ssh -T git@github.com
-```
-👉 __Note:__ Use the GitHub or GitLab **_instance URL_** you are trying to connect to. The instance URL can be found within the option __Clone with SSH__. For example, in `git@github.com:username/repository-space-name`, the prefix `git@github.com` is the instance URL.
-
-Follow the instructions and type `yes`:
-```
-> The authenticity of host 'github.com (IP ADDRESS)' can't be established.
-> RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-> Are you sure you want to continue connecting (yes/no)? [yes]
-```
-
-Receiving a welcome with `Hi username!` or `@username!` means you are all done!
 
 
 
