@@ -28,14 +28,14 @@ eval "$(ssh-agent -s)"
 ```
 
 Add your SSH key to the ssh-agent.
-```shell
+```
 ssh-add ~/.ssh/id_rsa
 ```
 
 
 ## Add your SSH Key to your account
 Copy your SSH key to clipboard.
-```shell
+```
 pbcopy < ~/.ssh/id_rsa.pub
 ```
 
@@ -44,7 +44,7 @@ Then you can **_paste_** your SSH Key to your GitHub or GitLab account to enable
 
 ## Test your SSH connection
 Open Terminal and run the following line.
-```shell
+```
 ssh -T git@github.com
 ```
 👉 __Note:__ Use the GitHub or GitLab **_instance URL_** you are trying to connect to. The instance URL can be found within the option __Clone with SSH__. For example, in `git@github.com:username/repository-space-name`, the prefix `git@github.com` is the instance URL.
