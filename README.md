@@ -1,17 +1,18 @@
 # Set Up My Mac
-
 > _Congrats! Opening up this page seems you've got a brand new Mac!  
 > Now let's set this beast up for development environment just like what you what._
 - [Command Line Tools](#command-line-tools)
 - [Homebrew](#homebrew)
 - [iTerm2](#iterm2)
+  - [Hushlogin](#hushlogin)
   - [Font](#font)
   - [Profile](#profile)
 - [Oh My Zsh](#oh-my-zsh)
 - [Powerlevel10k](#powerlevel10k)
+- [Configurations](#configurations)
+  - [List of config files included](#list-of-config-files-included)
 
 You can setup an SSH key to clone this repo from GitHub with SSH. See [SetupSSH.md](./SetupSSH.md)
-
 
 ## Command Line Tools
 The _very first_ thing to do is definitely install Apple's `Command Line Tools`, which is the prerequisites for all development setups.
@@ -41,6 +42,12 @@ iTerm2 is a terminal emulator for macOS that **_does amazing things_**. It is a 
 brew install --cask iterm2
 ```
 > _Let iTerm do the rest of the work onwards_ 👇  
+
+### Hushlogin
+Run the following command to create a `.hushlogin` file in your root directory to **_prevent getting the login banner_** `Last Login: blah blah blah` every time you start a new terminal session.
+```
+touch .hushlogin
+```
 
 ### Font
 [Cascadia Code](https://github.com/microsoft/cascadia-code.git) is one of my favorite font for development environment. It is a fun new coding font with gorgeous coding experience. Get `Cascadia Code` [here](https://github.com/microsoft/cascadia-code/releases). Download the package and open all font files to install them into the system.
@@ -86,15 +93,47 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Reload zsh by `exec zsh` or simply restart the terminal, the __Configuration Wizard__ is supposed to automatically pop out. If not, type `p10k configure`  to access it right from your Terminal. Just follow the instructions shown on screen to complete the set up!
+Reload zsh by `exec zsh` or simply restart Terminal, the __Configuration Wizard__ is supposed to automatically pop out. If not, type `p10k configure`  to access it right from your Terminal. Just follow the instructions shown on screen to complete the set up!
 
 Additionally, Powerlevel10k comes with dozens of **_built-in high quality segments_**. Many of these segments get enabled by default while others can be manually enabled by opening `~/.p10k.zsh` and uncommenting them. You can enable as many segments as you like to enhance your command line experience.
 
 
+## Configurations
+> _This part is mainly about configuring you command line and managing your __dotfiles__ across devices. It will then be unprecedentedly easy to synchronize your configurations on all of your devices __ALL IN ONE__!_
+
+The configuration files often appear as a `.fileName` file or a `.folderName` folder in the root directory  of your machine. They keep track of your settings of various applications or system functionalities so that you can customize your machine as freely as you like. However, those files are, _by default_, normally hidden by the system. Simply press `Command+Shift+.` to show and hide them on macOS, or run this command in Terminal to get a list of them with detailed access permissions and modification dates:
+```
+ls -la
+```
+
+The way I use to keep my dotfiles updated across all devices is utilizing **_Symbolic Links_** (also called [symlinks](https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/)) and **_Git Repositories_**. We can make a symlink of our config files from our repo to the system root folder so that wherever changes take place both sides will be synchronized.
+
+### List of config files included
+_These files are subject to updates._
+- `.zshrc` - Zsh configurations
+- `.p10k.zsh` - Powerlevel10k configurations
+- `.gitconfig` - git configurations
+
+💡 __Attention:__ Remember to delete the exsisting or newly-created ones first before making symlinks!
+```
+rm fileName
+```
+
+All config files are updated in the directory `dotfiles/`. Create the symlinks with the following commands.
+```
+ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.zshrc ~/.zshrc
+ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.gitconfig ~/.gitconfig
+```
+
+👉 __Note:__ Every time you edit your related configurations, **_DO NOT FORGET_** to `push` and `pull` this repository to sync those modifications across your devices.
 
 
 
 
 
 
-> To be continued...
+
+
+
+> _To be continued..._
