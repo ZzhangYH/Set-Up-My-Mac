@@ -1,12 +1,14 @@
 # Set Up My Mac
 > _Congrats! Opening up this page seems you've got a brand new Mac!  
 > Now let's set this beast up for development environment just like what you what._
-- [Command Line Tools](#command-line-tools)
+- [Command Line](#command-line)
+  - [Command Line Tools](#command-line-tools)
+  - [AutoBoot](#autoboot)
+  - [Hushlogin](#hushlogin)
 - [Homebrew](#homebrew)
 - [iTerm2](#iterm2)
   - [Font](#font)
   - [Profile](#profile)
-  - [Hushlogin](#hushlogin)
 - [Oh My Zsh](#oh-my-zsh)
 - [Powerlevel10k](#powerlevel10k)
 - [Configurations](#configurations)
@@ -14,12 +16,25 @@
 
 You can setup an SSH key to clone this repo from GitHub with SSH. See [SetupSSH.md](./SetupSSH.md)
 
-## Command Line Tools
+## Command Line
+
+### Command Line Tools
 The _very first_ thing to do is definitely install Apple's `Command Line Tools`, which is the prerequisites for all development setups.
 ```
 xcode-select --install
 ```
 
+### AutoBoot
+Apple implements the new feature **_Boot on Lid Open_** in mac, starting the computer when opening up the lid, which I find really annoying. Pressing the start key is what I prefer. To disable this feature, run this line with your login password:
+```
+sudo nvram AutoBoot=%00
+```
+
+### Hushlogin
+Run the following command to create a `.hushlogin` file in your root directory to **_prevent getting the login banner_** `Last Login: blah blah blah` every time you start a new terminal session.
+```
+touch .hushlogin
+```
 
 ## Homebrew
 🍺 [Homebrew](https://brew.sh) is a **_must_**.
@@ -50,12 +65,6 @@ brew install --cask iterm2
 My customized profile for iTerm is included in the repository `Default.json`. Simply import it into iTerm and things are all done!
 
 👉 __Note:__ The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
-
-### Hushlogin
-Run the following command to create a `.hushlogin` file in your root directory to **_prevent getting the login banner_** `Last Login: blah blah blah` every time you start a new terminal session.
-```
-touch .hushlogin
-```
 
 
 ## Oh My Zsh
