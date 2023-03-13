@@ -4,9 +4,9 @@
 - [Command Line Tools](#command-line-tools)
 - [Homebrew](#homebrew)
 - [iTerm2](#iterm2)
-  - [Hushlogin](#hushlogin)
   - [Font](#font)
   - [Profile](#profile)
+  - [Hushlogin](#hushlogin)
 - [Oh My Zsh](#oh-my-zsh)
 - [Powerlevel10k](#powerlevel10k)
 - [Configurations](#configurations)
@@ -43,12 +43,6 @@ brew install --cask iterm2
 ```
 > _Let iTerm do the rest of the work onwards_ 👇  
 
-### Hushlogin
-Run the following command to create a `.hushlogin` file in your root directory to **_prevent getting the login banner_** `Last Login: blah blah blah` every time you start a new terminal session.
-```
-touch .hushlogin
-```
-
 ### Font
 [Cascadia Code](https://github.com/microsoft/cascadia-code.git) is one of my favorite font for development environment. It is a fun new coding font with gorgeous coding experience. Get `Cascadia Code` [here](https://github.com/microsoft/cascadia-code/releases). Download the package and open all font files to install them into the system.
 
@@ -56,6 +50,12 @@ touch .hushlogin
 My customized profile for iTerm is included in the repository `Default.json`. Simply import it into iTerm and things are all done!
 
 👉 __Note:__ The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
+
+### Hushlogin
+Run the following command to create a `.hushlogin` file in your root directory to **_prevent getting the login banner_** `Last Login: blah blah blah` every time you start a new terminal session.
+```
+touch .hushlogin
+```
 
 
 ## Oh My Zsh
