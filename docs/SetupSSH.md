@@ -5,14 +5,13 @@ With SSH keys, you can connect to GitHub or GitLab without supplying your userna
 - [Add your SSH Key to your account](#add-your-ssh-key-to-your-account)
 - [Test your SSH connection](#test-your-ssh-connection)
 
-
 ## Generate a new SSH key
 Open Terminal and run the line below, substituting your email address as a label.
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-Follow the prompts and by default just `[Press Enter]` on every step:
+Follow the prompts and by default just `Press Enter` on every step:
 ```
 > Generating public/private ALGORITHM key pair.
 > Enter a file in which to save the key (/Users/YOU/.ssh/id_ALGORITHM): [Press enter]
@@ -47,6 +46,7 @@ Open Terminal and run the following line.
 ```
 ssh -T git@github.com
 ```
+
 👉 __Note:__ Use the GitHub or GitLab **_instance URL_** you are trying to connect to. The instance URL can be found within the option __Clone with SSH__. For example, in `git@github.com:username/repository-space-name`, the prefix `git@github.com` is the instance URL.
 
 Follow the instructions and type `yes`:
