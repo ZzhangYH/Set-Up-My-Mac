@@ -11,10 +11,10 @@
   - [Profile](#profile)
 - [Oh My Zsh](#oh-my-zsh)
 - [Powerlevel10k](#powerlevel10k)
-- [Configurations](#configurations)
-  - [List of config files included](#list-of-config-files-included)
 
-You can setup an SSH key to clone this repo from GitHub with SSH. See [SetupSSH.md](./SetupSSH.md)
+You can setup an SSH key to clone this repo from GitHub with SSH. See [SetupSSH.md](docs/SetupSSH.md). \
+To manage your configuration files, refer to [Configurations.md](docs/Configurations.md).
+
 
 ## Command Line
 
@@ -105,42 +105,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 Reload zsh by `exec zsh` or simply restart Terminal, the __Configuration Wizard__ is supposed to automatically pop out. If not, type `p10k configure`  to access it right from your Terminal. Just follow the instructions shown on screen to complete the set up!
 
 Additionally, Powerlevel10k comes with dozens of **_built-in high quality segments_**. Many of these segments get enabled by default while others can be manually enabled by opening `~/.p10k.zsh` and uncommenting them. You can enable as many segments as you like to enhance your command line experience.
-
-
-## Configurations
-> _This part is mainly about configuring you command line and managing your __dotfiles__ across devices. It will then be unprecedentedly easy to synchronize your configurations on all of your devices __ALL IN ONE__!_
-
-The configuration files often appear as a `.fileName` file or a `.folderName` folder in the root directory  of your machine. They keep track of your settings of various applications or system functionalities so that you can customize your machine as freely as you like. However, those files are, _by default_, normally hidden by the system. Simply press `Command+Shift+.` to show and hide them on macOS, or run this command in Terminal to get a list of them with detailed access permissions and modification dates:
-```
-ls -la
-```
-
-The way I use to keep my dotfiles updated across all devices is utilizing **_Symbolic Links_** (also called [symlinks](https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/)) and **_Git Repositories_**. We can make a symlink of our config files from our repo to the system root folder so that wherever changes take place both sides will be synchronized.
-
-### List of config files included
-_These files are subject to updates._
-- `.zshrc` - Zsh configurations
-- `.p10k.zsh` - Powerlevel10k configurations
-- `.gitconfig` - git configurations
-
-💡 __Attention:__ Remember to delete the exsisting or newly-created ones first before making symlinks!
-```
-rm fileName
-```
-
-All config files are updated in the directory `dotfiles/`. Create the symlinks with the following commands.
-```
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.zshrc ~/.zshrc
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.gitconfig ~/.gitconfig
-```
-
-👉 __Note:__ Every time you edit your related configurations, **_DO NOT FORGET_** to `push` and `pull` this repository to sync those modifications across your devices.
-
-
-
-
-
 
 
 
