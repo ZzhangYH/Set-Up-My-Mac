@@ -26,11 +26,11 @@ _(Please add new files down below and create symlink commands for them)._
 rm fileName
 ```
 
-All config files are updated in the directory `../dotfiles/`. Create the symlinks with the following commands.
+All config files are updated in the directory `../.dotfiles/`. Create the symlinks with the following commands.
 ```
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.zshrc ~/.zshrc
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -s ~/Developer/Set-Up-My-Mac/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/Developer/Set-Up-My-Mac/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/Developer/Set-Up-My-Mac/.dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -s ~/Developer/Set-Up-My-Mac/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
 👉 __Note:__ Every time you edit those configurations, **_DO NOT FORGET_** to `push` and `pull` this repository to sync those modifications across your devices.
