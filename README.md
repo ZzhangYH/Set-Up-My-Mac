@@ -62,7 +62,7 @@ brew install --cask iterm2
 [Cascadia Code](https://github.com/microsoft/cascadia-code.git) is one of my favorite font for development environment. It is a fun new coding font with gorgeous coding experience. Get `Cascadia Code` [here](https://github.com/microsoft/cascadia-code/releases). Download the package and open all font files to install them into the system.
 
 ### Profile
-My customized profile for iTerm is included in the repository `Default.json`. Simply import it into iTerm and things are all done!
+My customized profile for iTerm is included in the repository `src/Default.json`. Simply import it into iTerm and things are all done!
 
 The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
 
