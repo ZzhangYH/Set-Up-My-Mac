@@ -64,7 +64,9 @@ brew install --cask iterm2
 ### Profile
 My customized profile for iTerm is included in the repository `Default.json`. Simply import it into iTerm and things are all done!
 
-👉 __Note:__ The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
+The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
+
+👉 __Note:__ I have also included both copies of the __theme and font__ within the repository under `src/Atom_One_Dark_Theme` and `src/Cascadia_Code`. _Update them if there are newer releases!_
 
 
 ## Oh My Zsh
