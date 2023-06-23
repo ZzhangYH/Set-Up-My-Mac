@@ -95,16 +95,25 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 💡 __Attention:__ A couple of zsh bundles by [zsh-users](https://github.com/zsh-users) to make your zsh more productive:
 - [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+  ```
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  ```
+
 - [Zsh AutoSuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  
+  ```
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  ```
 
-    Do not forget to __activate__ those plugins in `~/.zshrc` after installing them:
+Do not forget to __activate__ those plugins in `~/.zshrc` after installing them:
 
-    ```
-    plugins=([plugins...]
-             Zsh Syntax Highlighting
-             Zsh AutoSuggestions
-    )
-    ```
+```
+plugins=([plugins...]
+         Zsh Syntax Highlighting
+         Zsh AutoSuggestions
+)
+```
 
 ## Powerlevel10k
 
