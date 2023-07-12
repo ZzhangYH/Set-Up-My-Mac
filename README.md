@@ -9,8 +9,8 @@
   - [Hushlogin](#hushlogin)
 - [Homebrew](#homebrew)
 - [iTerm2](#iterm2)
-  - [Font](#font)
-  - [Profile](#profile)
+  - [Fonts](#fonts)
+  - [Profiles](#profiles)
 - [Oh My Zsh](#oh-my-zsh)
 - [Powerlevel10k](#powerlevel10k)
 
@@ -69,17 +69,19 @@ brew install --cask iterm2
 
 > _Let iTerm do the rest of the work onwards_ 👇  
 
-### Font
+### Fonts
 
-[Cascadia Code](https://github.com/microsoft/cascadia-code.git) is one of my favorite font for development environment. It is a fun new coding font with gorgeous coding experience. Get `Cascadia Code` [here](https://github.com/microsoft/cascadia-code/releases). Download the package and open all font files to install them into the system.
+The following fonts can be found under `src/` directory, simply select them all and open to install.
+- [Cascadia Code](https://github.com/microsoft/cascadia-code) is one of my favorite fonts for development environment. It is an interesting new coding font with gorgeous italic style and ligatures.
+- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is also an elegant mono font designed for coding which I enjoy. Especially suitable for markdown coding blocks!
 
-### Profile
+### Profiles
 
 My customized profile for iTerm is included in the repository `src/Default.json`. Simply import it into iTerm and things are all done!
 
-The color theme `Atom One Dark` for both __Terminal__ and __iTerm__ is also available [here](https://github.com/nathanbuchar/atom-one-dark-terminal.git)! Check this out if the theme in profile above is not working.
-
-👉 __Note:__ I have also included both copies of the __theme and font__ within the repository under `src/Atom_One_Dark_Theme` and `src/Cascadia_Code`. _Update them if there are newer releases!_
+I also attached two color presets (themes) for iTerm, which is also under `src/` ending with `.itermcolors`
+- **One Dark**, my enduring loved color theme for all IDEs.
+- **Night Owl**, newly found refreshing!
 
 ## Oh My Zsh
 
