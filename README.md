@@ -72,8 +72,9 @@ brew install --cask iterm2
 ### Fonts
 
 The following fonts can be found under `src/` directory, simply select them all and open to install.
-- [Cascadia Code](https://github.com/microsoft/cascadia-code) is one of my favorite fonts for development environment. It is an interesting new coding font with gorgeous italic style and ligatures.
-- [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) is also an elegant mono font designed for coding which I enjoy. Especially suitable for markdown coding blocks!
+- [`Cascadia Code`](https://github.com/microsoft/cascadia-code) is one of my favorite fonts for development environment. It is an interesting new coding font with gorgeous italic style and ligatures.
+- [`Consolas`](https://learn.microsoft.com/en-us/typography/font-list/consolas) recently included!
+- [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro) is also an elegant mono font designed for coding which I enjoy. Especially suitable for markdown coding blocks!
 
 ### Profiles
 
