@@ -12,10 +12,10 @@ With SSH keys, you can connect to GitHub or GitLab without supplying your userna
 Open Terminal and run the line below, substituting your email address as a label.
 
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Follow the prompts and by default just `Press Enter` on every step:
+Follow the prompts and by default just `Press Enter` on every step (or enter a passphrase of your choice):
 
 ```
 > Generating public/private ALGORITHM key pair.
@@ -26,24 +26,28 @@ Follow the prompts and by default just `Press Enter` on every step:
 
 ## Add your SSH key to the ssh-agent
 
-Start the ssh-agent in the background.
+Start the ssh-agent in the background. Keep in mind that:
+- `id_ALGORITHM` is the ***private*** key
+- `id_ALGORITHM.pub` is the ***public*** key
+- If following the step above, the name for your ssh key-pair will be `id_ed25519`
+- Your key may also be named as `id_rsa`, `id_dsa`, or `id_ecdsa`
 
 ```
 eval "$(ssh-agent -s)"
 ```
 
-Add your SSH key to the ssh-agent.
+Add your SSH ***private*** key to the ssh-agent.
 
 ```
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ALGORITHM
 ```
 
 ## Add your SSH Key to your account
 
-Copy your SSH key to clipboard.
+Copy your SSH ***public*** key to clipboard.
 
 ```
-pbcopy < ~/.ssh/id_rsa.pub
+pbcopy < ~/.ssh/id_ALGORITHM.pub
 ```
 
 Then you can **_paste_** your SSH Key to your GitHub or GitLab account to enable authentication for Git operations over SSH.
