@@ -110,6 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Shell proxy
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export https_proxy=http://127.0.0.1:7890"
+alias unsetproxy="unset ALL_PROXY;unset http_proxy;unset https_proxy"
+
 # Homebrew: python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 alias python="python3"
