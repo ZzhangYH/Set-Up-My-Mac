@@ -3,3 +3,4 @@
 	name = Yuhan Zhang
 [core]
 	editor = code --wait
+	autocrlf = input
