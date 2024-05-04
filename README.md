@@ -71,11 +71,18 @@ brew install --cask iterm2
 
 ### Fonts
 
-The following fonts can be found under `src/` directory, simply select them all and open to install.
-- [`Cascadia Code`](https://github.com/microsoft/cascadia-code) is one of my favorite fonts for development environment. It is an interesting new coding font with gorgeous italic style and ligatures.
-- [`Consolas`](https://learn.microsoft.com/en-us/typography/font-list/consolas) recently included!
-- [`MesloLGS NF`](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo) is the recommended font patched for Powerlevel10k to unlock all its style options.
-- [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro) is also an elegant mono font designed for coding which I enjoy. Especially suitable for markdown coding blocks!
+- [`Cascadia Code`](https://github.com/microsoft/cascadia-code)
+- [`Consolas`](https://learn.microsoft.com/en-us/typography/font-list/consolas)
+- [`Fira`](https://github.com/mozilla/Fira)
+- [`MesloLGS NF`](https://github.com/romkatv/powerlevel10k-media)
+- [`Source Code Pro`](https://github.com/adobe-fonts/source-code-pro)
+
+Some fonts are included under `src/`, while you can quickly install them using HomeBrew:
+
+```
+brew tap homebrew/cask-fonts
+brew install font-cascadia-code font-fira-mono font-fira-sans font-meslo-for-powerlevel10k font-source-code-pro
+```
 
 ### Profiles
 
