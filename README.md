@@ -80,7 +80,7 @@ brew install --cask iterm2
 Some fonts are included under `src/`, while you can quickly install them using HomeBrew:
 
 ```
-brew tap homebrew/cask-fonts
+# brew tap homebrew/cask-fonts # New version of brew no longer requires this command (deprecated).
 brew install font-cascadia-code font-fira-mono font-fira-sans font-meslo-for-powerlevel10k font-source-code-pro
 ```
 
@@ -121,8 +121,8 @@ Do not forget to __activate__ those plugins in `~/.zshrc` after installing them:
 
 ```
 plugins=([plugins...]
-         Zsh Syntax Highlighting
-         Zsh AutoSuggestions
+         zsh-syntax-highlighting
+         zsh-autosuggestions
 )
 ```
 
